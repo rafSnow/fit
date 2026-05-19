@@ -352,7 +352,7 @@ export async function seedExercises() {
   const setsToInsert: SessionSet[] = [];
   BACKUP_SESSIONS.forEach(s => {
     s.exercises.forEach(exRealized => {
-      exRealized.sets.forEach((set, setIdx) => {
+      exRealized.sets.forEach((set: any, setIdx) => {
         setsToInsert.push({
           sessionId: s.id,
           exerciseId: exRealized.eid,
